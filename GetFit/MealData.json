@@ -1,0 +1,14 @@
+[
+    {
+        "category": "Breakfast",
+        "calories": 1800.0,
+        "mealContents": "lots of food",
+        "timeOfMeal": "2020-01-20T15:58:17Z",
+        "protein": 100.0,
+        "carbs": 100.0,
+        "fats": 100.0,
+        "photoFileName": "ImageUnavailable",
+        "photoUrl": "DefaultMealPhoto",
+        "hasPhotoUrl": 0
+    }
+]
