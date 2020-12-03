@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         createMealDatabase()      // Given in NationalParkData.swift
         getPermissionForLocation()
+        createScanFocusRegionImage()
         return true
     }
  

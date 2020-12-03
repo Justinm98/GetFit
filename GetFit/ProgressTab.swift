@@ -42,7 +42,7 @@ struct ProgressTab : View {
                             ForEach(allProgress) { progress in
                                 // Public function getImageFromUrl is given in UtilityFunctions.swift
                                 if(progress.hasPhotoUrl == 0) {
-                                    photoImageFromBinaryData(binaryData: progress.photo!)
+                                    photoImageFromBinaryData(binaryData: progress.photo!, defaultFilename: "ImageUnavailable")
                                         .resizable()
                                         .scaledToFit()
                                         .onTapGesture {

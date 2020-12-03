@@ -143,7 +143,7 @@ struct AddProgress: View {
     var progressPhotoImage: Image {
         
         if let imageData = self.photoImageData {
-            let photo = photoImageFromBinaryData(binaryData: imageData)
+            let photo = photoImageFromBinaryData(binaryData: imageData, defaultFilename: "ImageUnavailable")
             return photo
         } else {
             return Image("StockProgressPhoto")

@@ -24,7 +24,7 @@ struct MealItem: View {
         HStack {
             // This function is given in PhotoImageFromBinaryData.swift
             if(meal.hasPhotoUrl == 0) {
-            photoImageFromBinaryData(binaryData: meal.photo!)
+                photoImageFromBinaryData(binaryData: meal.photo!, defaultFilename: "ImageUnavailable")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(minWidth: 100, maxWidth: 100, alignment: .center)

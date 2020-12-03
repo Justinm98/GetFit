@@ -7,7 +7,7 @@
         "protein": 100.0,
         "carbs": 100.0,
         "fats": 100.0,
-        "photoFileName": "ImageUnavailable",
+        "photoFileName": "DefaultMealPhoto",
         "photoUrl": "DefaultMealPhoto",
         "hasPhotoUrl": 0
     }

@@ -35,7 +35,7 @@ struct MealDetails: View {
             }
             Section(header: Text("Meal Photo")) {
                 if(meal.hasPhotoUrl == 0) {
-                photoImageFromBinaryData(binaryData: meal.photo!)
+                photoImageFromBinaryData(binaryData: meal.photo!, defaultFilename: "ImageUnavailable")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minWidth: 300, maxWidth: 500, alignment: .center)
