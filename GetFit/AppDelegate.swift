@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         *   Create National Parks Database   *
         **************************************
         */
+        
         createMealDatabase()      // Given in NationalParkData.swift
         getPermissionForLocation()
         createScanFocusRegionImage()

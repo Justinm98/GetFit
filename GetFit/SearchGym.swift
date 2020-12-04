@@ -16,7 +16,9 @@ struct SearchGym: View {
     
     var body: some View {
         NavigationView {
+                    
             Form {
+                
                 Section(header: Text("Select Radius")) {
                     Picker("", selection: $selectedRadiusIndex) {
                         ForEach(0 ..< radii.count, id: \.self) {
@@ -69,6 +71,7 @@ struct SearchGym: View {
                 }
             } // end of Form
             .navigationBarTitle(Text("Find Nearby Gyms"), displayMode: .inline)
+            
         } // end of NavigationView
     } // end of body
     
