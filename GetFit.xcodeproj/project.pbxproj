@@ -68,6 +68,11 @@
 		B774560D256B317F0017D006 /* MealStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774560C256B317F0017D006 /* MealStruct.swift */; };
 		B7745611256B355F0017D006 /* MealData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7745610256B355F0017D006 /* MealData.json */; };
 		B7CC851D256D948B00C23840 /* addProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC851C256D948B00C23840 /* addProgress.swift */; };
+		B7DEFC31257B14EB00C4F7C6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DEFC30257B14EB00C4F7C6 /* WidgetKit.framework */; };
+		B7DEFC33257B14EB00C4F7C6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DEFC32257B14EB00C4F7C6 /* SwiftUI.framework */; };
+		B7DEFC36257B14EB00C4F7C6 /* GetFitWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DEFC35257B14EB00C4F7C6 /* GetFitWidget.swift */; };
+		B7DEFC38257B14EC00C4F7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DEFC37257B14EC00C4F7C6 /* Assets.xcassets */; };
+		B7DEFC3C257B14EC00C4F7C6 /* GetFitWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7E1E5342566ADDA003A89E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E1E5332566ADDA003A89E7 /* AppDelegate.swift */; };
 		B7E1E5362566ADDA003A89E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E1E5352566ADDA003A89E7 /* SceneDelegate.swift */; };
 		B7E1E5382566ADDA003A89E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E1E5372566ADDA003A89E7 /* ContentView.swift */; };
@@ -76,6 +81,30 @@
 		B7E1E5402566ADDB003A89E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E1E53F2566ADDB003A89E7 /* Preview Assets.xcassets */; };
 		B7E1E5432566ADDB003A89E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E1E5412566ADDB003A89E7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7DEFC3A257B14EC00C4F7C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E1E5282566ADDA003A89E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7DEFC2D257B14EB00C4F7C6;
+			remoteInfo = GetFitWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7DEFC3D257B14EC00C4F7C6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B7DEFC3C257B14EC00C4F7C6 /* GetFitWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		30372E8525781F5900AF3589 /* getImageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getImageFromUrl.swift; sourceTree = "<group>"; };
@@ -139,6 +168,12 @@
 		B774560C256B317F0017D006 /* MealStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStruct.swift; sourceTree = "<group>"; };
 		B7745610256B355F0017D006 /* MealData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MealData.json; sourceTree = "<group>"; };
 		B7CC851C256D948B00C23840 /* addProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProgress.swift; sourceTree = "<group>"; };
+		B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetFitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7DEFC30257B14EB00C4F7C6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B7DEFC32257B14EB00C4F7C6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B7DEFC35257B14EB00C4F7C6 /* GetFitWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFitWidget.swift; sourceTree = "<group>"; };
+		B7DEFC37257B14EC00C4F7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7DEFC39257B14EC00C4F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E1E5302566ADDA003A89E7 /* GetFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E1E5332566ADDA003A89E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E1E5352566ADDA003A89E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +186,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B7DEFC2B257B14EB00C4F7C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7DEFC33257B14EB00C4F7C6 /* SwiftUI.framework in Frameworks */,
+				B7DEFC31257B14EB00C4F7C6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7E1E52D2566ADDA003A89E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,10 +365,31 @@
 			name = "Gym Finder";
 			sourceTree = "<group>";
 		};
+		B7DEFC2F257B14EB00C4F7C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7DEFC30257B14EB00C4F7C6 /* WidgetKit.framework */,
+				B7DEFC32257B14EB00C4F7C6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7DEFC34257B14EB00C4F7C6 /* GetFitWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B7DEFC35257B14EB00C4F7C6 /* GetFitWidget.swift */,
+				B7DEFC37257B14EC00C4F7C6 /* Assets.xcassets */,
+				B7DEFC39257B14EC00C4F7C6 /* Info.plist */,
+			);
+			path = GetFitWidget;
+			sourceTree = "<group>";
+		};
 		B7E1E5272566ADDA003A89E7 = {
 			isa = PBXGroup;
 			children = (
 				B7E1E5322566ADDA003A89E7 /* GetFit */,
+				B7DEFC34257B14EB00C4F7C6 /* GetFitWidget */,
+				B7DEFC2F257B14EB00C4F7C6 /* Frameworks */,
 				B7E1E5312566ADDA003A89E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -333,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				B7E1E5302566ADDA003A89E7 /* GetFit.app */,
+				B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,6 +434,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B7DEFC2D257B14EB00C4F7C6 /* GetFitWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7DEFC40257B14EC00C4F7C6 /* Build configuration list for PBXNativeTarget "GetFitWidgetExtension" */;
+			buildPhases = (
+				B7DEFC2A257B14EB00C4F7C6 /* Sources */,
+				B7DEFC2B257B14EB00C4F7C6 /* Frameworks */,
+				B7DEFC2C257B14EB00C4F7C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetFitWidgetExtension;
+			productName = GetFitWidgetExtension;
+			productReference = B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B7E1E52F2566ADDA003A89E7 /* GetFit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E1E5472566ADDB003A89E7 /* Build configuration list for PBXNativeTarget "GetFit" */;
@@ -375,10 +458,12 @@
 				B7E1E52C2566ADDA003A89E7 /* Sources */,
 				B7E1E52D2566ADDA003A89E7 /* Frameworks */,
 				B7E1E52E2566ADDA003A89E7 /* Resources */,
+				B7DEFC3D257B14EC00C4F7C6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7DEFC3B257B14EC00C4F7C6 /* PBXTargetDependency */,
 			);
 			name = GetFit;
 			productName = GetFit;
@@ -394,6 +479,9 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					B7DEFC2D257B14EB00C4F7C6 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					B7E1E52F2566ADDA003A89E7 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -413,11 +501,20 @@
 			projectRoot = "";
 			targets = (
 				B7E1E52F2566ADDA003A89E7 /* GetFit */,
+				B7DEFC2D257B14EB00C4F7C6 /* GetFitWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B7DEFC2C257B14EB00C4F7C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7DEFC38257B14EC00C4F7C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7E1E52E2566ADDA003A89E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +531,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B7DEFC2A257B14EB00C4F7C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7DEFC36257B14EB00C4F7C6 /* GetFitWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7E1E52C2566ADDA003A89E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,6 +610,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B7DEFC3B257B14EC00C4F7C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7DEFC2D257B14EB00C4F7C6 /* GetFitWidgetExtension */;
+			targetProxy = B7DEFC3A257B14EC00C4F7C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B7E1E5412566ADDB003A89E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -517,6 +630,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B7DEFC3E257B14EC00C4F7C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCL89X35W9;
+				INFOPLIST_FILE = GetFitWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominicgennello.GetFit.GetFitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7DEFC3F257B14EC00C4F7C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCL89X35W9;
+				INFOPLIST_FILE = GetFitWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominicgennello.GetFit.GetFitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B7E1E5452566ADDB003A89E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -636,6 +791,7 @@
 		B7E1E5482566ADDB003A89E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -657,6 +813,7 @@
 		B7E1E5492566ADDB003A89E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -678,6 +835,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B7DEFC40257B14EC00C4F7C6 /* Build configuration list for PBXNativeTarget "GetFitWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7DEFC3E257B14EC00C4F7C6 /* Debug */,
+				B7DEFC3F257B14EC00C4F7C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B7E1E52B2566ADDA003A89E7 /* Build configuration list for PBXProject "GetFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
