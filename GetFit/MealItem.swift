@@ -27,7 +27,7 @@ struct MealItem: View {
                 photoImageFromBinaryData(binaryData: meal.photo!, defaultFilename: "ImageUnavailable")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(minWidth: 100, maxWidth: 100, alignment: .center)
+                    .frame(width: 100.0, height: 75.0)
             }
             else {
                 getImageFromUrl(url: meal.photoUrl!)

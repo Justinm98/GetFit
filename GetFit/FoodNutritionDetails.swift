@@ -146,7 +146,7 @@ struct FoodNutritionDetails: View {
             }
             
         }   // End of Form
-        .navigationBarTitle(Text("Nutrition Details"), displayMode: .inline)
+        .navigationBarTitle(Text("Add Meal via Barcode"), displayMode: .inline)
         .font(.system(size: 14))
         .disableAutocorrection(true)
         .autocapitalization(.words)

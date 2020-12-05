@@ -59,7 +59,7 @@ struct AddProgress: View {
     var body: some View {
         Form {
             Section(header: Text("Current Weight")) {
-                TextField("Enter Current Weight", value: $currentWeight, formatter: self.numberFormatter)
+                TextField("Enter Current Weight in lbs.", value: $currentWeight, formatter: self.numberFormatter)
                     .keyboardType(.numbersAndPunctuation)
             }
             Section(header: Text("Time and Date of Progress Update").padding(.top, 10)) {
@@ -250,7 +250,7 @@ struct AddProgress: View {
             aProgress.photo = imageData
         } else {
             // Obtain default park visit photo image from Assets.xcassets as UIImage
-            let photoUIImage = UIImage(named: "DefaultMealPhoto")
+            let photoUIImage = UIImage(named: "DefaultProgressPhoto")
             
             // Convert photoUIImage to data of type Data (Binary Data) in JPEG format with 100% quality
             let photoData = photoUIImage?.jpegData(compressionQuality: 1.0)
