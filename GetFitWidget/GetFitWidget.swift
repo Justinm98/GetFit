@@ -10,17 +10,17 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), photo: "ImageUnavailable")
+        SimpleEntry(date: Date(), photo: "Quote1")
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), photo: "ImageUnavailable")
+        let entry = SimpleEntry(date: Date(), photo: "Quote1")
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-        let photos = ["ImageUnavailable", "ImageUnavailable", "ImageUnavailable", "ImageUnavailable", "ImageUnavailable"]
+        let photos = ["Quote1", "Quote2", "Quote3", "Quote4", "Quote5", "Quote6"]
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
@@ -44,10 +44,8 @@ struct GetFitWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        
             Image(entry.photo)
                 .resizable()
-        
     }
 }
 
