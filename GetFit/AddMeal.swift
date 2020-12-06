@@ -193,7 +193,7 @@ struct AddMeal: View {
             let photo = photoImageFromBinaryData(binaryData: imageData, defaultFilename: "ImageUnavailable")
             return photo
         } else {
-            return Image("DefaultMealPhoto")
+            return Image("Dinner")
         }
     }
     
@@ -283,7 +283,7 @@ struct AddMeal: View {
             aMeal.photo = imageData
         } else {
             // Obtain default park visit photo image from Assets.xcassets as UIImage
-            let photoUIImage = UIImage(named: "DefaultMealPhoto")
+            let photoUIImage = UIImage(named: mealCategory[categoryIndex])
             
             // Convert photoUIImage to data of type Data (Binary Data) in JPEG format with 100% quality
             let photoData = photoUIImage?.jpegData(compressionQuality: 1.0)
