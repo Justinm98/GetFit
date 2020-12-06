@@ -82,7 +82,7 @@ struct ProgressTab : View {
     
     var progressInfoAlert: Alert {
         Alert(title: Text(selectedPhoto.date!),
-                  message: Text("Weight: \(selectedPhoto.weight!)"),
+                  message: Text("Weight: \(selectedPhoto.weight!) lbs."),
                   dismissButton: .default(Text("OK")) )
         }
     
