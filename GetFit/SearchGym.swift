@@ -16,58 +16,59 @@ struct SearchGym: View {
     
     var body: some View {
         NavigationView {
-                    
+            
             Form {
-                
-                Section(header: Text("Select Radius")) {
-                    Picker("", selection: $selectedRadiusIndex) {
-                        ForEach(0 ..< radii.count, id: \.self) {
-                            Text("\(self.radii[$0])")
-                        }
-                    }
-                    .pickerStyle(WheelPickerStyle())
-                    .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
-                }
-                Section(header: Text("Search Gyms")) {
-                    HStack {
-                        Button(action: {
-                            self.searchApi()
-                            self.searchCompleted = true
-                        }) {
-                            Text(self.searchCompleted ? "Search Completed" : "Search")
-                        }
-                        .frame(width: 240, height: 36, alignment: .center)
-                        .background(
-                            RoundedRectangle(cornerRadius: 16)
-                                .strokeBorder(Color.black, lineWidth: 1)
-                        )
-                    } // End of HStack
-                    
-                    if searchCompleted {
-                        Section(header: Text("Show Gyms Found")) {
-                            
-                            NavigationLink(destination: GymResults()) {
-                                HStack {
-                                    Image(systemName: "list.bullet")
-                                        .foregroundColor(.blue)
-                                        .imageScale(.medium)
-                                        .font(Font.title.weight(.regular))
-                                    Text("Show Gyms Found")
-                                        .font(.system(size: 16))
-                                }
+                if !searchCompleted {
+                    Section(header: Text("Select Radius")) {
+                        Picker("", selection: $selectedRadiusIndex) {
+                            ForEach(0 ..< radii.count, id: \.self) {
+                                Text("\(self.radii[$0])")
                             }
-                            
                         }
-                        Section(header: Text("Clear Search")) {
+                        .pickerStyle(WheelPickerStyle())
+                        .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
+                    }
+                    
+                    Section(header: Text("Search Gyms")) {
+                        HStack {
                             Button(action: {
-                                self.searchCompleted = false
+                                self.searchApi()
+                                self.searchCompleted = true
                             }) {
-                                Image(systemName: "clear")
-                                    .imageScale(.large)
+                                Text("Search Gyms")
+                            }
+                            .frame(width: 240, height: 36, alignment: .center)
+                            .background(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .strokeBorder(Color.black, lineWidth: 1)
+                            )
+                        } // End of HStack
+                    }
+                }
+                if searchCompleted {
+                    Section(header: Text("Show Gyms Found")) {
+                        
+                        NavigationLink(destination: GymResults()) {
+                            HStack {
+                                Image(systemName: "list.bullet")
+                                    .foregroundColor(.blue)
+                                    .imageScale(.medium)
+                                    .font(Font.title.weight(.regular))
+                                Text("Show Gyms Found")
+                                    .font(.system(size: 16))
                             }
                         }
                         
                     }
+                    Section(header: Text("Clear Search")) {
+                        Button(action: {
+                            self.searchCompleted = false
+                        }) {
+                            Image(systemName: "clear")
+                                .imageScale(.large)
+                        }
+                    }
+                    
                 }
             } // end of Form
             .navigationBarTitle(Text("Find Nearby Gyms"), displayMode: .inline)
