@@ -146,7 +146,7 @@ struct AddProgress: View {
             let photo = photoImageFromBinaryData(binaryData: imageData, defaultFilename: "ImageUnavailable")
             return photo
         } else {
-            return Image("StockProgressPhoto")
+            return Image("DefaultProgressPhoto")
         }
     }
     
