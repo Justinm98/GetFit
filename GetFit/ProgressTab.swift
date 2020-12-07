@@ -87,20 +87,25 @@ struct ProgressTab : View {
         }
     
     func getProgressDataString() -> String {
-        
+        //create an array to store the weight values in the data base
         var dataStringArray = [Double]()
         
+        //append the fetched weight values to the array for processing
         for aProgress in allProgress {
             dataStringArray.append(Double(truncating: aProgress.weight!))
         }
         
+        //create the string to build the data paramter on
         var dataParam = ""
         
+        //condition to catch an empty data base
         if(dataStringArray.count == 0){
             return dataParam
         }
+        //condition to catch when their are less than 30 values in the database
         if(dataStringArray.count <= 30){
             var count = 0
+            //loop through each value to append to the string separating each value by commas excluding the last value
             for _ in dataStringArray {
                 
                 if(count < dataStringArray.count - 1){
@@ -113,8 +118,10 @@ struct ProgressTab : View {
                 count += 1
             }
         }
+        //condition for when their are more than 30 values
         else {
             var count = dataStringArray.count - 30
+            //loop through each value to append to the string separating each value by commas excluding the last value
             for _ in dataStringArray {
                 
                 if(count < dataStringArray.count - 1){
@@ -127,8 +134,7 @@ struct ProgressTab : View {
                 count += 1
             }
         }
-        
-        print(dataParam)
+        //return the data parameter to be put in the request url
         return dataParam
     }
     
