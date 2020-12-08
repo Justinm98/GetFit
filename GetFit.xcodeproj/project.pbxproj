@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30372E8625781F5900AF3589 /* getImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30372E8525781F5900AF3589 /* getImageFromUrl.swift */; };
+		30DCD2BA257F4599004A4E3A /* ShareActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD2B9257F4599004A4E3A /* ShareActivity.swift */; };
 		B711ABC0256C8CB90034D736 /* ProgressTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711ABBF256C8CB90034D736 /* ProgressTab.swift */; };
 		B719E7E6256D50AA0082BA9F /* ImageChartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719E7E5256D50AA0082BA9F /* ImageChartAPI.swift */; };
 		B71AF793256B0F55004C697D /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AF792256B0F55004C697D /* PhotoCaptureView.swift */; };
@@ -108,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		30372E8525781F5900AF3589 /* getImageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getImageFromUrl.swift; sourceTree = "<group>"; };
+		30DCD2B9257F4599004A4E3A /* ShareActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivity.swift; sourceTree = "<group>"; };
 		B711ABBF256C8CB90034D736 /* ProgressTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressTab.swift; sourceTree = "<group>"; };
 		B719E7E5256D50AA0082BA9F /* ImageChartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChartAPI.swift; sourceTree = "<group>"; };
 		B71AF792256B0F55004C697D /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				B7252B55256B072D00B86149 /* UtilityFunctions.swift */,
 				B76281082577091100CD860F /* MapView.swift */,
 				B762810A2577094100CD860F /* CurrentLocation.swift */,
+				30DCD2B9257F4599004A4E3A /* ShareActivity.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				B730E6F9256ADF4F000B3579 /* NoNutritionData.swift in Sources */,
 				B762810D2577096500CD860F /* GoogleMapsApiData.swift in Sources */,
 				B7252B56256B072D00B86149 /* UtilityFunctions.swift in Sources */,
+				30DCD2BA257F4599004A4E3A /* ShareActivity.swift in Sources */,
 				B730E6F6256ADEEF000B3579 /* ScanFocusRegion.swift in Sources */,
 				B730E6E8256ADBFB000B3579 /* Nutrition.swift in Sources */,
 				B730E6F0256ADD5D000B3579 /* MealTracker.swift in Sources */,

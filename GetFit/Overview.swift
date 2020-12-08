@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+import PDFKit
+import Foundation
 
 struct Overview: View {
     
@@ -19,6 +20,8 @@ struct Overview: View {
     @State private var categories = ["Abs":0, "Arms":0, "Back":0, "Calves":0, "Chest":0, "Legs":0, "Shoulders":0]
     
     var body: some View {
+        ZStack {
+            activityViewController
         NavigationView {
         Form {
             Section(header: Text("Average Calories Burnt Per Workout")) {
@@ -67,6 +70,17 @@ struct Overview: View {
         } // end of Form
         .font(.system(size: 14))
         .navigationBarTitle(Text("Your Overview"), displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                // Display the Share interface to Share uiImageOfQRBarcode
+                activityViewController.sharePDF(pdfData: generatePDF())
+            }) {
+                Image(systemName:"square.and.arrow.up")
+                    .imageScale(.medium)
+                    .font(Font.title.weight(.regular))
+                    .foregroundColor(.blue)
+            })
+        }
         }
     } // end of body
     
@@ -163,6 +177,37 @@ struct Overview: View {
         let endWeight = allProgress[allProgress.count-1].weight ?? 0
         let weightLost = Double(truncating: startWeight) - Double(truncating: endWeight)
         return weightLost
+    }
+    
+    func generatePDF() -> Data {
+        //create metadata and initialize format
+        let format = UIGraphicsPDFRendererFormat()
+        let metaData = [
+            kCGPDFContextTitle: "Fitness Summary",
+            kCGPDFContextAuthor: "CS3714 Team 1"
+          ]
+        format.documentInfo = metaData as [String: Any]
+        
+        //create dimensions (standard letter: 8.5in x 11in, dpi: 72)
+        let pageWidth = Int(8.5 * 72)
+        let pageHeight = 11 * 72
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        //create our renderer
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        let data = renderer.pdfData { (context) in
+            context.beginPage()
+            let attributes = [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+              ]
+              let text = "Average Calories Burned per Workout: \(averageCaloriesBurnt())"
+              let textRect = CGRect(x: 100, // left margin
+                                    y: 100, // top margin
+                                width: 400,
+                               height: 20)
+
+              text.draw(in: textRect, withAttributes: attributes)
+        }
+        return data
     }
 }
 
