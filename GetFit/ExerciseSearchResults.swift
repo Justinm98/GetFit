@@ -20,5 +20,6 @@ struct ExerciseSearchResults: View {
                 }
             }
         }
+        .navigationBarTitle(Text("Exercise Search Results"))
     }
 }

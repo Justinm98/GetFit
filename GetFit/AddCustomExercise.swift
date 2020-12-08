@@ -52,6 +52,7 @@ struct AddCustomExercise: View {
         }
         .font(.system(size: 16))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
+        .navigationBarTitle(Text("Add Custom Exercise"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.inputDataValidated() {

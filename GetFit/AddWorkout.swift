@@ -78,6 +78,7 @@ struct AddWorkout: View {
         } //end of form
         .font(.system(size: 16))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
+        .navigationBarTitle(Text("Add Workout"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.inputDataValidated() {

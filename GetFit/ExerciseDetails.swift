@@ -44,5 +44,6 @@ struct ExerciseDetails: View {
             }
         }
         .font(.system(size: 16))
+        .navigationBarTitle(Text("Exercise Details"))
     }
 }

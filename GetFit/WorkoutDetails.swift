@@ -52,6 +52,7 @@ struct WorkoutDetails: View {
             }
         }
             .font(.system(size: 16))
+            .navigationBarTitle(Text("Workout Details"))
     }
 }
 

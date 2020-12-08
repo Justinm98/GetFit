@@ -69,6 +69,7 @@ struct ChangeWorkout: View {
             }
             allExercises = workout.exercises!.allObjects as! [Exercise]
         }
+        .navigationBarTitle(Text("Change Workout"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.changesMade() {

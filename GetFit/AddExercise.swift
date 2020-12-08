@@ -122,6 +122,7 @@ struct AddExercise: View {
             }
         } //end of form
         .font(.system(size: 16))
+        .navigationBarTitle(Text("Add Exercise"))
     }//end of body
     
 }

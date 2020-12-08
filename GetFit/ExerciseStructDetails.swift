@@ -43,12 +43,13 @@ struct ExerciseStructDetails: View {
                     
                 }
             }
-            .font(.system(size: 16))
             .frame(width: 240, height: 36, alignment: .center)
             .background(
                 RoundedRectangle(cornerRadius: 16)
                     .strokeBorder(Color.black, lineWidth: 1)
             )
         }
+        .font(.system(size: 16))
+        .navigationBarTitle(Text("Exercise Details"))
     }
 }

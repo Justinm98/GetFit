@@ -48,6 +48,7 @@ struct ChangeExercise: View {
         }
         .font(.system(size: 16))
         .alert(isPresented: $showChangesAlert, content: { self.changesAlert })
+        .navigationBarTitle(Text("Change Exercise"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.changesMade() {
