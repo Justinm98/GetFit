@@ -1,6 +1,6 @@
 //
 //  WorkoutItem.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/23/20.
 //

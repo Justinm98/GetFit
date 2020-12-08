@@ -1,6 +1,6 @@
 //
 //  AddWorkout.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/23/20.
 //
@@ -114,7 +114,7 @@ struct AddWorkout: View {
             })
     }
     func saveNewWorkout() {
-        // Create an instance of the Recipe entity in managedObjectContext
+        // Create an instance of the Workout entity in managedObjectContext
         let aWorkout = Workout(context: self.managedObjectContext)
        
         //  Dress it up by specifying its attributes
@@ -126,7 +126,7 @@ struct AddWorkout: View {
        
         /*
          ===========================
-         MARK: - ❎ Publisher Entity
+         MARK: - ❎ Exercise Entity
          ===========================
          */
         // ❎ Define the fetch request
@@ -134,7 +134,6 @@ struct AddWorkout: View {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         for anExerciseStruct in exercisesToAdd {
-            // Publisher name is equal to the new name in case insensitive manner
             fetchRequest.predicate = NSPredicate(format: "name ==[c] %@", anExerciseStruct.name)
            
             var results = [Exercise]()
@@ -145,7 +144,7 @@ struct AddWorkout: View {
                 results = try managedObjectContext.fetch(fetchRequest)
                
                 if results.isEmpty {
-                    // Create an instance of the Publisher Entity in managedObjectContext
+                    // Create an instance of the Exercise Entity in managedObjectContext
                     anExercise = Exercise(context: self.managedObjectContext)
                     
                     // Dress it up by specifying its attributes
@@ -159,7 +158,7 @@ struct AddWorkout: View {
                     anExercise = results[0]
                 }
             } catch {
-                print("Publisher entity fetch failed!")
+                print("Exercise entity fetch failed!")
             }
            
             // Establish Relationship between Workout and Exercise

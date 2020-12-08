@@ -1,6 +1,6 @@
 //
 //  ExerciseSearchResults.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/29/20.
 //
