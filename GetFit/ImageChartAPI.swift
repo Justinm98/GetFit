@@ -1,9 +1,10 @@
 //
 //  WeatherData.swift
-//  TravelAid
+//  GetFit
 //
-//  Created by Justin Maloney on 10/31/20.
+//  Created by Justin Maloney on 12/09/20.
 //  Copyright © 2020 Justin Maloney. All rights reserved.
+//
 
 import Foundation
 import SwiftUI

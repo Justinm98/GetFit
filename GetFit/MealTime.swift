@@ -1,9 +1,9 @@
 //
 //  ParkVisitDate.swift
-//  NationalParks
+//  GetFit
 //
-//  Created by Osman Balci on 5/5/20.
-//  Copyright © 2020 Osman Balci. All rights reserved.
+//  Created by Justin Maloney on 12/09/20.
+//  Copyright © 2020 Justin Maloney. All rights reserved.
 //
  
 import SwiftUI

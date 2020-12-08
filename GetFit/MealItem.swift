@@ -1,23 +1,23 @@
 //
-//  ParkItem.swift
-//  NationalParks
+//  MealItem.swift
+//  GetFit
 //
-//  Created by Osman Balci on 5/5/20.
-//  Copyright © 2020 Osman Balci. All rights reserved.
+//  Created by Justin Maloney on 12/09/20.
+//  Copyright © 2020 Justin Maloney. All rights reserved.
 //
  
 import SwiftUI
  
 struct MealItem: View {
    
-    // ❎ Input parameter: CoreData ParkVisit Entity instance reference
+    // ❎ Input parameter: CoreData Meal Entity instance reference
     let meal: Meal
    
     // ❎ CoreData FetchRequest returning all ParkVisit entities in the database
     @FetchRequest(fetchRequest: Meal.allMealsFetchRequest()) var allMeals: FetchedResults<Meal>
    
     // ❎ Refresh this view upon notification that the managedObjectContext completed a save.
-    // Upon refresh, @FetchRequest is re-executed fetching all ParkVisit entities with all the changes.
+    // Upon refresh, @FetchRequest is re-executed fetching all Meal entities with all the changes.
     @EnvironmentObject var userData: UserData
    
     var body: some View {

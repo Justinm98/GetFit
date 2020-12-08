@@ -1,8 +1,8 @@
 //
-//  SearchCocktail.swift
-//  Cocktails
+//  Nutrition.swift
+//  GetFit
 //
-//  Created by Justin Maloney on 10/04/20.
+//  Created by Justin Maloney on 12/09/20.
 //  Copyright © 2020 Justin Maloney. All rights reserved.
 //
 
@@ -21,8 +21,7 @@ struct Nutrition: View {
                             .frame(alignment: .center)
                             .padding()
                         
-                        // Show REST Countries API provider's website in default web browser
-                        
+                        // Show Meal tracker view
                         NavigationLink(destination: MealTracker()) {
                             HStack {
                                 Image(systemName: "list.bullet")
@@ -36,6 +35,8 @@ struct Nutrition: View {
                             .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
                         }
                         .padding()
+                        
+                        //show food barcode scanner view
                         NavigationLink(destination: ScanFoodBarcode()) {
                             HStack {
                                 Image(systemName: "barcode.viewfinder")
@@ -50,6 +51,7 @@ struct Nutrition: View {
                         }
                         .padding()
                         
+                        //show manual upc entry view
                         NavigationLink(destination: EnterFoodBarcodeUPC()) {
                             HStack {
                                 Image(systemName: "pencil.and.ellipsis.rectangle")

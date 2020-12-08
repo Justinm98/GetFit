@@ -14,7 +14,7 @@ struct MealTracker: View {
     // ❎ CoreData managedObjectContext reference
     @Environment(\.managedObjectContext) var managedObjectContext
     
-    // ❎ CoreData FetchRequest returning all ParkVisit entities in the database
+    // ❎ CoreData FetchRequest returning all Meal entities in the database
     @FetchRequest(fetchRequest: Meal.allMealsFetchRequest()) var allMeals: FetchedResults<Meal>
     
     // ❎ Refresh this view upon notification that the managedObjectContext completed a save.
@@ -26,7 +26,7 @@ struct MealTracker: View {
         List {
             /*
              Each NSManagedObject has internally assigned unique ObjectIdentifier
-             used by ForEach to display allParkVisits in a dynamic scrollable list.
+             used by ForEach to display allMeals in a dynamic scrollable list.
              */
             ForEach(self.allMeals) { aMeal in
                 NavigationLink(destination: MealDetails(meal: aMeal)) {
@@ -49,7 +49,7 @@ struct MealTracker: View {
     
     /*
      ----------------------------------
-     MARK: - Delete Selected Park Visit
+     MARK: - Delete Selected Meal
      ----------------------------------
      */
     func delete(at offsets: IndexSet) {

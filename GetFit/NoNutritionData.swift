@@ -1,11 +1,10 @@
 //
 //  NoNutritionData.swift
-//  BarcodeScanner
+//  GetFit
 //
-//  Created by Osman Balci on 5/26/20.
-//  Copyright © 2020 Osman Balci. All rights reserved.
+//  Created by Justin Maloney on 12/09/20.
+//  Copyright © 2020 Justin Maloney. All rights reserved.
 //
- 
 import SwiftUI
  
 struct NoNutritionData: View {

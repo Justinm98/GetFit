@@ -2,7 +2,8 @@
 //  MapView.swift
 //  GetFit
 //
-//  Created by CS3714 on 11/21/20.
+//  Created by Justin Maloney on 12/09/20.
+//  Copyright © 2020 Justin Maloney. All rights reserved.
 //
 
 import SwiftUI
