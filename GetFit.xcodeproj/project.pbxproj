@@ -22,7 +22,6 @@
 		B7252B58256B079600B86149 /* PhotoImageFromBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7252B57256B079600B86149 /* PhotoImageFromBinaryData.swift */; };
 		B7252B5A256B09AF00B86149 /* MealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7252B59256B09AF00B86149 /* MealTime.swift */; };
 		B730E6E8256ADBFB000B3579 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730E6E7256ADBFB000B3579 /* Nutrition.swift */; };
-		B730E6EA256ADC09000B3579 /* GymFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730E6E9256ADC09000B3579 /* GymFinder.swift */; };
 		B730E6EE256ADC1D000B3579 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730E6ED256ADC1D000B3579 /* Overview.swift */; };
 		B730E6F0256ADD5D000B3579 /* MealTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730E6EF256ADD5D000B3579 /* MealTracker.swift */; };
 		B730E6F2256ADD73000B3579 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730E6F1256ADD73000B3579 /* BarcodeScanner.swift */; };
@@ -123,7 +122,6 @@
 		B7252B57256B079600B86149 /* PhotoImageFromBinaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageFromBinaryData.swift; sourceTree = "<group>"; };
 		B7252B59256B09AF00B86149 /* MealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTime.swift; sourceTree = "<group>"; };
 		B730E6E7256ADBFB000B3579 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
-		B730E6E9256ADC09000B3579 /* GymFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFinder.swift; sourceTree = "<group>"; };
 		B730E6ED256ADC1D000B3579 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		B730E6EF256ADD5D000B3579 /* MealTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTracker.swift; sourceTree = "<group>"; };
 		B730E6F1256ADD73000B3579 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 		B730E6E2256ACD96000B3579 /* Gym Finder */ = {
 			isa = PBXGroup;
 			children = (
-				B730E6E9256ADC09000B3579 /* GymFinder.swift */,
 			);
 			name = "Gym Finder";
 			sourceTree = "<group>";
@@ -576,7 +573,6 @@
 				B7E1E5342566ADDA003A89E7 /* AppDelegate.swift in Sources */,
 				B7252B54256B06CA00B86149 /* NavigationStyle.swift in Sources */,
 				B774560B256B31250017D006 /* NutritionData.swift in Sources */,
-				B730E6EA256ADC09000B3579 /* GymFinder.swift in Sources */,
 				B7252B5A256B09AF00B86149 /* MealTime.swift in Sources */,
 				B730E708256AE0B6000B3579 /* FoodNutritionDetails.swift in Sources */,
 				B7628103257708B200CD860F /* SearchGym.swift in Sources */,
