@@ -1,5 +1,5 @@
 //
-//  AddParkVisit.swift
+//  AddMeal.swift
 //  GetFit
 //
 //  Created by Justin Maloney on 12/09/20.
@@ -22,7 +22,7 @@ struct AddMeal: View {
     // ❎ CoreData managedObjectContext reference
     @Environment(\.managedObjectContext) var managedObjectContext
     
-    // ParkVisit Entity
+    // Meal Entity
     @State private var dateVisited = Date()
     @State private var fullName = ""
     @State private var categoryIndex = 1  // Default: "Very Good"
@@ -32,17 +32,10 @@ struct AddMeal: View {
     @State private var fatTotal = 0.0
     @State private var carbTotal = 0.0
     
-    // National Park Visit Photo
+    // Meal Photo
     @State private var showImagePicker = false
     @State private var photoImageData: Data? = nil
     @State private var photoTakeOrPickIndex = 0     // Default: Take using camera
-    
-    // Visit Notes Taken by Voice Recording
-    @State private var recordingVoice = false
-    
-    // Visit Notes Taken by Speech to Text Conversion
-    @State private var recordingVoiceToText = false
-    @State private var speechConvertedToText = ""
     
     // Alerts
     @State private var showMealAddedAlert = false
@@ -184,7 +177,7 @@ struct AddMeal: View {
     
     /*
      ---------------------------------
-     MARK: - National Park Visit Photo
+     MARK: - Meal Photo
      ---------------------------------
      */
     var mealPhotoImage: Image {
@@ -199,7 +192,7 @@ struct AddMeal: View {
     
     /*
      ------------------------------
-     MARK: - Park Visit Saved Alert
+     MARK: - Meal Saved Alert
      ------------------------------
      */
     var mealAddedAlert: Alert {
@@ -239,7 +232,7 @@ struct AddMeal: View {
     
     /*
      ************************************
-     MARK: - Save New National Park Visit
+     MARK: - Save New Meal
      ************************************
      */
     func saveNewMeal() {
@@ -255,10 +248,10 @@ struct AddMeal: View {
         
         /*
          ==========================================================
-         Create an instance of the ParkVisit Entity and dress it up
+         Create an instance of the Meal Entity and dress it up
          ==========================================================
          */
-        // ❎ Create an instance of the ParkVisit Entity in CoreData managedObjectContext
+        // ❎ Create an instance of the Meal Entity in CoreData managedObjectContext
         let aMeal = Meal(context: self.managedObjectContext)
         let aNutrient = Nutrients(context: self.managedObjectContext)
         

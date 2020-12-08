@@ -8,7 +8,7 @@
         "carbs": 100.0,
         "fats": 30.0,
         "photoFileName": "Breakfast",
-        "photoUrl": "DefaultMealPhoto",
+        "photoUrl": "Dinner",
         "hasPhotoUrl": 0
     },
     {
@@ -20,7 +20,7 @@
         "carbs": 25.0,
         "fats": 20.0,
         "photoFileName": "Lunch",
-        "photoUrl": "DefaultMealPhoto",
+        "photoUrl": "Dinner",
         "hasPhotoUrl": 0
     },
     {
@@ -32,7 +32,7 @@
         "carbs": 40.0,
         "fats": 40.0,
         "photoFileName": "Dinner",
-        "photoUrl": "DefaultMealPhoto",
+        "photoUrl": "Dinner",
         "hasPhotoUrl": 0
     },
     {
@@ -44,7 +44,7 @@
         "carbs": 20.0,
         "fats": 5.0,
         "photoFileName": "Snack",
-        "photoUrl": "DefaultMealPhoto",
+        "photoUrl": "Dinner",
         "hasPhotoUrl": 0
     }
 ]

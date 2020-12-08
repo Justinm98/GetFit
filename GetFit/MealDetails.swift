@@ -12,21 +12,21 @@ import AVFoundation
 
 struct MealDetails: View {
     
-    // ❎ Input parameter: CoreData ParkVisit Entity instance reference
+    // ❎ Input parameter: CoreData Meal Entity instance reference
     let meal: Meal
     
-    // ❎ CoreData FetchRequest returning all ParkVisit entities in the database
+    // ❎ CoreData FetchRequest returning all Meal entities in the database
     @FetchRequest(fetchRequest: Meal.allMealsFetchRequest()) var allMeals: FetchedResults<Meal>
     
     // ❎ Refresh this view upon notification that the managedObjectContext completed a save.
-    // Upon refresh, @FetchRequest is re-executed fetching all ParkVisit entities with all the changes.
+    // Upon refresh, @FetchRequest is re-executed fetching all Meal entities with all the changes.
     @EnvironmentObject var userData: UserData
     
     var body: some View {
         Form {
             /*
              ?? is called nil coalescing operator.
-             IF visit.fullName is not nil THEN
+             IF meal.category is not nil THEN
              unwrap it and return its value
              ELSE return ""
              */
