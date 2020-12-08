@@ -249,7 +249,7 @@
 			children = (
 				B730E6E4256ACE27000B3579 /* Workout */,
 				B730E6E3256ACE25000B3579 /* Nutrition */,
-				B730E6E2256ACD96000B3579 /* Gym Finder */,
+				B76281012577089700CD860F /* Gym Finder */,
 				B730E6E1256ACD94000B3579 /* Progress */,
 				B730E6E0256ACD91000B3579 /* Overview */,
 			);
@@ -271,13 +271,6 @@
 				B7CC851C256D948B00C23840 /* addProgress.swift */,
 			);
 			name = Progress;
-			sourceTree = "<group>";
-		};
-		B730E6E2256ACD96000B3579 /* Gym Finder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Gym Finder";
 			sourceTree = "<group>";
 		};
 		B730E6E3256ACE25000B3579 /* Nutrition */ = {
@@ -406,7 +399,6 @@
 		B7E1E5322566ADDA003A89E7 /* GetFit */ = {
 			isa = PBXGroup;
 			children = (
-				B76281012577089700CD860F /* Gym Finder */,
 				B71AF791256B0F55004C697D /* Take or PIck Photo */,
 				B7252B4D256B024B00B86149 /* Data Model */,
 				B730E700256ADFEB000B3579 /* Food Barcode */,

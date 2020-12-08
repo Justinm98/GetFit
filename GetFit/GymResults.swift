@@ -17,7 +17,7 @@ struct GymResults: View {
                 }
             }
         } // end of List
-        .navigationBarTitle(Text("Nearby Gyms"), displayMode: .inline)
+        .navigationBarTitle(Text("Nearby Gyms"))
     } // end of body
     
     func gymLocationOnMap(gym: Gym) -> AnyView {
