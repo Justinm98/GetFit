@@ -71,7 +71,7 @@ struct SearchGym: View {
                     
                 }
             } // end of Form
-            .navigationBarTitle(Text("Find Nearby Gyms"))
+            .navigationBarTitle(Text("Find Gyms"))
             
         } // end of NavigationView
     } // end of body

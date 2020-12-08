@@ -66,7 +66,7 @@ struct MealDetails: View {
                 Text("\(meal.nutrients!.fats!) grams" )
             }
         }   // End of Form
-        .navigationBarTitle(Text("Meal Details"), displayMode: .inline)
+        .navigationBarTitle(Text("Meal Details"))
         // Set font and size for the whole VStack content
         .font(.system(size: 14))
     }   // End of body

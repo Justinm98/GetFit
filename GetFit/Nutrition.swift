@@ -79,7 +79,7 @@ struct Nutrition: View {
                                 .padding(.horizontal, 30)
                         }
                     }   // End of VStack
-                    .navigationBarTitle(Text("Nutrition"), displayMode: .inline)
+                    .navigationBarTitle(Text("Nutrition"))
                     .padding(50)
                 }   // End of ScrollView
             }   // End of ZStack

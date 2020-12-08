@@ -146,7 +146,7 @@ struct AddMeal: View {
         .font(.system(size: 14))
         .disableAutocorrection(true)
         .autocapitalization(.words)
-        .navigationBarTitle(Text("Add New Meal"), displayMode: .inline)
+        .navigationBarTitle(Text("Add New Meal"))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
         // Use single column navigation view for iPhone and iPad
         .navigationViewStyle(StackNavigationViewStyle())

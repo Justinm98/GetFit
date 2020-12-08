@@ -26,14 +26,22 @@ struct Overview: View {
         Form {
             Section(header: Text("Average Calories Burnt Per Workout")) {
                 let formatAveCalories = String(format: "%.1f", averageCaloriesBurnt())
-                Text("\(formatAveCalories) cal with \(allWorkouts.count) workouts")
+                if totalWorkouts() != 0 {
+                    Text("\(formatAveCalories) cal with \(totalWorkouts()) workouts")
+                } else {
+                    Text("No workout completed yet")
+                }
             }
             Section(header: Text("Total Calories Burnt")) {
                 Text("\(totalCaloriesBurnt()) cal")
             }
             Section(header: Text("Average Minutes Exercised Per Workout")) {
                 let formatAveMinutes = String(format: "%.1f", averageExerciseMinutes())
-                Text("\(formatAveMinutes) min with \(allWorkouts.count) workouts")
+                if totalWorkouts() != 0 {
+                    Text("\(formatAveMinutes) min with \(totalWorkouts()) workouts")
+                } else {
+                    Text("No workout completed yet")
+                }
             }
             Section(header: Text("Total Minutes Excercised")) {
                 Text("\(totalExerciseMinutes()) min")
@@ -69,7 +77,7 @@ struct Overview: View {
             }
         } // end of Form
         .font(.system(size: 14))
-        .navigationBarTitle(Text("Your Overview"), displayMode: .inline)
+        .navigationBarTitle(Text("Overview"))
         .navigationBarItems(trailing:
             Button(action: {
                 // Display the Share interface to Share uiImageOfQRBarcode
@@ -84,6 +92,13 @@ struct Overview: View {
         }
     } // end of body
     
+    func totalWorkouts() -> Int {
+        var total = 0;
+        for workout in allWorkouts {
+            total = total + Int(truncating: workout.timesDone ?? 0)
+        }
+        return total
+    }
     /*
      MARK: - get total number of calories burnt
      */
@@ -100,7 +115,7 @@ struct Overview: View {
      */
     func averageCaloriesBurnt() -> Double {
         let total = totalCaloriesBurnt()
-        let average = Double(total)/Double(allWorkouts.count)
+        let average = Double(total)/Double(totalWorkouts())
         
         return average
     }
@@ -121,7 +136,7 @@ struct Overview: View {
      */
     func averageExerciseMinutes() -> Double {
         let total = totalExerciseMinutes()
-        let average = Double(total)/Double(allWorkouts.count)
+        let average = Double(total)/Double(totalWorkouts())
         return average
     }
     
@@ -145,25 +160,25 @@ struct Overview: View {
         for workout in allWorkouts {
             
             if workout.category == "Abs" {
-                categoryCount[0] += 1
+                categoryCount[0] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Arms" {
-                categoryCount[1] += 1
+                categoryCount[1] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Back" {
-                categoryCount[2] += 1
+                categoryCount[2] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Calves" {
-                categoryCount[3] += 1
+                categoryCount[3] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Chest" {
-                categoryCount[4] += 1
+                categoryCount[4] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Legs" {
-                categoryCount[5] += 1
+                categoryCount[5] += Int(truncating: workout.timesDone ?? 0)
             }
             if workout.category == "Shoulders" {
-                categoryCount[6] += 1
+                categoryCount[6] += Int(truncating: workout.timesDone ?? 0)
             }
         }
         return categoryCount

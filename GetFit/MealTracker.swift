@@ -36,7 +36,7 @@ struct MealTracker: View {
             .onDelete(perform: delete)
             
         }   // End of List
-        .navigationBarTitle(Text("Meal Tracker"), displayMode: .inline)
+        .navigationBarTitle(Text("Meal Tracker"))
         // Place the Edit button on left and Add (+) button on right of the navigation bar
         .navigationBarItems(trailing:
                                 NavigationLink(destination: AddMeal()) {
