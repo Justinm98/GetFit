@@ -1,6 +1,6 @@
 //
 //  WorkoutDetails.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/23/20.
 //
@@ -13,8 +13,26 @@ struct WorkoutDetails: View {
     @EnvironmentObject var userData: UserData
     
     let workout: Workout
+    
+    @State private var workoutDone = false
+    
     var body: some View {
         Form {
+            Section(header: Text("Complete Workout")) {
+                Button(action: {
+                    workout.timesDone = NSNumber(value:
+                        (workout.timesDone as! Int) +
+                        (workoutDone ? -1 : 1))
+                    workoutDone.toggle()
+                    do {
+                        try self.managedObjectContext.save()
+                    } catch {
+                        return
+                    }
+                }) {
+                    Text(workoutDone ? "Undo Workout" : "Complete Workout")
+                }
+            }
             Section(header: Text("Workout Name")) {
                 Text(workout.name ?? "Unavailable")
             }
@@ -52,6 +70,7 @@ struct WorkoutDetails: View {
             }
         }
             .font(.system(size: 16))
+            .navigationBarTitle(Text("Workout Details"))
     }
 }
 

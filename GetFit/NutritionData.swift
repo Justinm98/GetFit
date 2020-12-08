@@ -201,6 +201,7 @@ func populateDatabase() {
         workoutEntity.name = workoutData.name
         workoutEntity.duration = NSNumber(value: workoutData.duration)
         workoutEntity.calories = NSNumber(value: workoutData.calories)
+        workoutEntity.timesDone = NSNumber(value: 0)
         workoutEntity.category = workoutData.category
         workoutEntity.notes = workoutData.notes
         

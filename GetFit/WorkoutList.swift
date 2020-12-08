@@ -1,6 +1,6 @@
 //
 //  WorkoutList.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/23/20.
 //
@@ -29,7 +29,7 @@ struct WorkoutList: View {
                 .onDelete(perform: delete)
                
             }   // End of List
-                .navigationBarTitle(Text("My Workouts"), displayMode: .inline)
+                .navigationBarTitle(Text("My Workouts"))
                
                 // Place the Edit button on left and Add (+) button on right of the navigation bar
                 .navigationBarItems(leading: EditButton(), trailing:

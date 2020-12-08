@@ -1,6 +1,6 @@
 //
 //  ChangeWorkout.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/30/20.
 //
@@ -69,6 +69,7 @@ struct ChangeWorkout: View {
             }
             allExercises = workout.exercises!.allObjects as! [Exercise]
         }
+        .navigationBarTitle(Text("Change Workout"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.changesMade() {
@@ -277,7 +278,6 @@ struct ChangeWorkout: View {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         for anExerciseStruct in exercisesToAdd {
-            // Publisher name is equal to the new name in case insensitive manner
             fetchRequest.predicate = NSPredicate(format: "name ==[c] %@", anExerciseStruct.name)
            
             var results = [Exercise]()
@@ -288,7 +288,7 @@ struct ChangeWorkout: View {
                 results = try managedObjectContext.fetch(fetchRequest)
                
                 if results.isEmpty {
-                    // Create an instance of the Publisher Entity in managedObjectContext
+                    // Create an instance of the Exercise Entity in managedObjectContext
                     anExercise = Exercise(context: self.managedObjectContext)
                     
                     // Dress it up by specifying its attributes

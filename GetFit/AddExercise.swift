@@ -1,6 +1,6 @@
 //
 //  AddExercise.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/25/20.
 //
@@ -122,6 +122,7 @@ struct AddExercise: View {
             }
         } //end of form
         .font(.system(size: 16))
+        .navigationBarTitle(Text("Add Exercise"))
     }//end of body
     
 }

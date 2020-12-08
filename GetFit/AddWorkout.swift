@@ -1,6 +1,6 @@
 //
 //  AddWorkout.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/23/20.
 //
@@ -78,6 +78,7 @@ struct AddWorkout: View {
         } //end of form
         .font(.system(size: 16))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
+        .navigationBarTitle(Text("Add Workout"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.inputDataValidated() {
@@ -113,19 +114,20 @@ struct AddWorkout: View {
             })
     }
     func saveNewWorkout() {
-        // Create an instance of the Recipe entity in managedObjectContext
+        // Create an instance of the Workout entity in managedObjectContext
         let aWorkout = Workout(context: self.managedObjectContext)
        
         //  Dress it up by specifying its attributes
         aWorkout.name = workoutName
         aWorkout.duration = NSNumber(value: Int(duration) ?? 0)
+        aWorkout.timesDone = NSNumber(value: 0)
         aWorkout.category = categories[categoryIndex]
         aWorkout.notes = notes
         aWorkout.calories = NSNumber(value: Int(calories) ?? 0)
        
         /*
          ===========================
-         MARK: - ❎ Publisher Entity
+         MARK: - ❎ Exercise Entity
          ===========================
          */
         // ❎ Define the fetch request
@@ -133,7 +135,6 @@ struct AddWorkout: View {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         for anExerciseStruct in exercisesToAdd {
-            // Publisher name is equal to the new name in case insensitive manner
             fetchRequest.predicate = NSPredicate(format: "name ==[c] %@", anExerciseStruct.name)
            
             var results = [Exercise]()
@@ -144,7 +145,7 @@ struct AddWorkout: View {
                 results = try managedObjectContext.fetch(fetchRequest)
                
                 if results.isEmpty {
-                    // Create an instance of the Publisher Entity in managedObjectContext
+                    // Create an instance of the Exercise Entity in managedObjectContext
                     anExercise = Exercise(context: self.managedObjectContext)
                     
                     // Dress it up by specifying its attributes
@@ -158,7 +159,7 @@ struct AddWorkout: View {
                     anExercise = results[0]
                 }
             } catch {
-                print("Publisher entity fetch failed!")
+                print("Exercise entity fetch failed!")
             }
            
             // Establish Relationship between Workout and Exercise

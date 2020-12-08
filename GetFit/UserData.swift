@@ -1,6 +1,6 @@
 //
 //  UserData.swift
-//  NationalParks
+//  GetFit
 //
 //  Created by Osman Balci on 2/26/20.
 //  Copyright © 2020 Osman Balci. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  ExerciseDetails.swift
-//  DomsGitFit
+//  GetFit
 //
 //  Created by Dominic Gennello on 11/30/20.
 //
@@ -44,5 +44,6 @@ struct ExerciseDetails: View {
             }
         }
         .font(.system(size: 16))
+        .navigationBarTitle(Text("Exercise Details"))
     }
 }
