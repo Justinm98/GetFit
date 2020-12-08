@@ -65,9 +65,11 @@ struct ProgressTab : View {
                         
                     }   // End of ScrollView
                     .alert(isPresented: $showProgressInfoAlert, content: { self.progressInfoAlert })
+                    .navigationBarTitle(Text("Progress"))
                 }   // End of VStack
+               
             }   // End of ZStack
-            .navigationBarTitle(Text("Progress"), displayMode: .inline)
+            
             // Place the Edit button on left and Add (+) button on right of the navigation bar
             .navigationBarItems(trailing:
                                     NavigationLink(destination: AddProgress()) {

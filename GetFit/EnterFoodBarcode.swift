@@ -55,7 +55,7 @@ struct EnterFoodBarcodeUPC: View {
                 .padding()
             }
         }   // End of VStack
-        .navigationBarTitle(Text("UPC Lookup"), displayMode: .inline)
+        .navigationBarTitle(Text("UPC Lookup"))
     }
    
     var foodItemNutritionDetails: some View {

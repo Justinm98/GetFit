@@ -99,7 +99,7 @@ struct AddProgress: View {
         .font(.system(size: 14))
         .disableAutocorrection(true)
         .autocapitalization(.words)
-        .navigationBarTitle(Text("Add New Progress"), displayMode: .inline)
+        .navigationBarTitle(Text("Add New Progress"))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
         // Use single column navigation view for iPhone and iPad
         .navigationViewStyle(StackNavigationViewStyle())
