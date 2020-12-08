@@ -15,6 +15,7 @@ public class Workout: NSManagedObject, Identifiable {
     @NSManaged public var notes: String?
     @NSManaged public var duration: NSNumber?
     @NSManaged public var calories: NSNumber?
+    @NSManaged public var timesDone: NSNumber?
     @NSManaged public var exercises: NSSet?
 }
 extension Workout {

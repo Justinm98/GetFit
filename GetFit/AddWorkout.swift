@@ -120,6 +120,7 @@ struct AddWorkout: View {
         //  Dress it up by specifying its attributes
         aWorkout.name = workoutName
         aWorkout.duration = NSNumber(value: Int(duration) ?? 0)
+        aWorkout.timesDone = NSNumber(value: 0)
         aWorkout.category = categories[categoryIndex]
         aWorkout.notes = notes
         aWorkout.calories = NSNumber(value: Int(calories) ?? 0)
