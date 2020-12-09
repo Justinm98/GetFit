@@ -17,10 +17,6 @@ struct Nutrition: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        Image("SearchCocktails")
-                            .frame(alignment: .center)
-                            .padding()
-                        
                         // Show Meal tracker view
                         NavigationLink(destination: MealTracker()) {
                             HStack {
