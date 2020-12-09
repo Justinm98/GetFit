@@ -20,31 +20,45 @@ struct MealTracker: View {
     // ❎ Refresh this view upon notification that the managedObjectContext completed a save.
     // Upon refresh, @FetchRequest is re-executed fetching all ParkVisit entities with all the changes.
     @EnvironmentObject var userData: UserData
-    
+
     var body: some View {
-        NavigationView {
-            List {
-                /*
-                 Each NSManagedObject has internally assigned unique ObjectIdentifier
-                 used by ForEach to display allMeals in a dynamic scrollable list.
-                 */
-                ForEach(self.allMeals) { aMeal in
-                    NavigationLink(destination: MealDetails(meal: aMeal)) {
-                        MealItem(meal: aMeal)
+        VStack{
+            Form {
+                Section(header: Text("Add Meal")) {
+                    NavigationLink(destination: AddMeal()) {
+                        HStack {
+                            Image(systemName: "plus.circle")
+                                .imageScale(.large)
+                                .foregroundColor(.blue)
+                            Text("Add Meal")
+                        }//end of hstack
                     }
                 }
-                .onDelete(perform: delete)
-                
-            }   // End of List
-            .navigationBarTitle(Text("Meal Tracker"))
-            .navigationBarItems( trailing:
-                                    NavigationLink(destination: AddMeal(), label: {
-                    Image(systemName: "plus")
-                                    }))
+                Section(header: Text("Meals")) {
+                    List {
+                        /*
+                         Each NSManagedObject has internally assigned unique ObjectIdentifier
+                         used by ForEach to display allMeals in a dynamic scrollable list.
+                         */
+                        ForEach(self.allMeals) { aMeal in
+                            NavigationLink(destination: MealDetails(meal: aMeal)) {
+                                MealItem(meal: aMeal)
+                            }
+                        }
+                        .onDelete(perform: delete)
+                        
+                    }   // End of List
+                }
+                .navigationBarTitle(Text("Meal Tracker"))
+            }
+          
+            
+           
+                               
         }
         // Place the Edit button on left and Add (+) button on right of the navigation bar
         
-            .customNavigationViewStyle()
+           
        
        
         
