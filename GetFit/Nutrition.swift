@@ -82,7 +82,7 @@ struct Nutrition: View {
                 }   // End of ScrollView
             }   // End of ZStack
         }   // End of NavigationView
-        .navigationViewStyle(StackNavigationViewStyle())
+        .customNavigationViewStyle()
         
     }
 }
