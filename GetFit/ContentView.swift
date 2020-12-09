@@ -29,7 +29,7 @@ struct ContentView: View {
             ProgressTab()
                 .tabItem {
                     Image(systemName: "rectangle.stack.person.crop")
-                    Text("Progess")
+                    Text("Progress")
                 }
             Overview()
                 .tabItem {

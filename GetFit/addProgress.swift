@@ -183,7 +183,7 @@ struct AddProgress: View {
      */
     func inputDataValidated() -> Bool {
         
-        if self.currentWeight <= 0.0 {
+        if self.currentWeight <= 0.0 || self.currentWeight > 600 {
             return false
         }
         
