@@ -42,7 +42,7 @@ struct MealTracker: View {
                                 NavigationLink(destination: AddMeal()) {
                                     Image(systemName: "plus")
                                 })
-        
+        .customNavigationViewStyle()
         
         
     }
