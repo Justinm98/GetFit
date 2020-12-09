@@ -142,7 +142,7 @@ struct AddMeal: View {
         .navigationBarTitle(Text("Add New Meal"))
         .alert(isPresented: $showInputDataMissingAlert, content: { self.inputDataMissingAlert })
         // Use single column navigation view for iPhone and iPad
-        .navigationViewStyle(StackNavigationViewStyle())
+        
         .navigationBarItems(trailing:
                                 Button(action: {
                                     if self.inputDataValidated() {
