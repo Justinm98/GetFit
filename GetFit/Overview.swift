@@ -229,7 +229,8 @@ struct Overview: View {
             text = "Total Minutes Exercised: \(totalExerciseMinutes()) min"
             textRect = CGRect(x: 100, y: 160, width: pageWidth, height: 20);
             text.draw(in: textRect, withAttributes: attributes)
-            text = "Number of Workouts per each Muscle Category\n\tAbs: \(categories["Abs"] ?? 0)\n\tArms: \(categories["Arms"] ?? 0)\n\tBack: \(categories["Back"] ?? 0)\n\tCalves: \(categories["Calves"] ?? 0)\n\tChest: \(categories["Chest"] ?? 0)\n\tLegs: \(categories["Legs"] ?? 0)\n\tShoulders: \(categories["Shoulders"] ?? 0)"
+            let categoryCount = updateWorkoutCategoryArray()
+            text = "Number of Workouts per each Muscle Category\n\tAbs: \(categoryCount[0])\n\tArms: \(categoryCount[1])\n\tBack: \(categoryCount[2])\n\tCalves: \(categoryCount[3])\n\tChest: \(categoryCount[4])\n\tLegs: \(categoryCount[5])\n\tShoulders: \(categoryCount[6])"
             textRect = CGRect(x: 100, y: 180, width: pageWidth, height: 160);
             text.draw(in: textRect, withAttributes: attributes)
             let weightChange = totalWeightLoss()
@@ -241,17 +242,16 @@ struct Overview: View {
                 descrWeightChange = "gained"
             }
             text = "Total Weight Loss/Gain: \(weightChange) lbs \(descrWeightChange)"
-            textRect = CGRect(x: 100, y: 340, width: pageWidth, height: 20);
+            textRect = CGRect(x: 100, y: 320, width: pageWidth, height: 20);
             text.draw(in: textRect, withAttributes: attributes)
             text = "Average Calories Consumed per Meal: \(averageCaloriesConsumed()) with \(allMeals.count)"
-            textRect = CGRect(x: 100, y: 360, width: pageWidth, height: 20);
+            textRect = CGRect(x: 100, y: 340, width: pageWidth, height: 20);
             text.draw(in: textRect, withAttributes: attributes)
             
-            let temp = ProgressTab()
-            let chartURL = URL(string: "https://image-charts.com/chart?chtt=Weight+Loss+Progress&cht=lc&chg=20,50,1,1,333333&chd=a:\(temp.getProgressDataString())&chm=o,ff0000,0,-1,8.0&chs=350x150&chxt=y&chma=0,5,0,0")
+            let chartURL = URL(string: "https://image-charts.com/chart?chtt=Weight+Loss+Progress&cht=lc&chg=20,50,1,1,333333&chd=a:\(getProgressDataString())&chm=o,ff0000,0,-1,8.0&chs=350x150&chxt=y&chma=0,5,0,0")
             let chartData = try! Data(contentsOf: chartURL!)
             var image = UIImage(data: chartData)!
-            var nextTop = addImage(pageRect: pageRect, imageTop: 400, image: image)
+            var nextTop = addImage(pageRect: pageRect, imageTop: 360, image: image)
             
             text = "Progress Photo Overview on Next Page"
             textRect = CGRect(x: 100, y: Int(nextTop), width: pageWidth, height: 20);
@@ -301,7 +301,58 @@ struct Overview: View {
       image.draw(in: imageRect)
       return imageRect.origin.y + imageRect.size.height
     }
-
+    
+    func getProgressDataString() -> String {
+        //create an array to store the weight values in the data base
+        var dataStringArray = [Double]()
+        
+        //append the fetched weight values to the array for processing
+        for aProgress in allProgress {
+            dataStringArray.append(Double(truncating: aProgress.weight!))
+        }
+        
+        //create the string to build the data paramter on
+        var dataParam = ""
+        
+        //condition to catch an empty data base
+        if(dataStringArray.count == 0){
+            return dataParam
+        }
+        //condition to catch when their are less than 30 values in the database
+        if(dataStringArray.count <= 30){
+            var count = 0
+            //loop through each value to append to the string separating each value by commas excluding the last value
+            for _ in dataStringArray {
+                
+                if(count < dataStringArray.count - 1){
+                    dataParam = dataParam + "\(dataStringArray[count]),"
+                }
+                else {
+                    dataParam = dataParam + "\(dataStringArray[count])"
+                    break
+                }
+                count += 1
+            }
+        }
+        //condition for when their are more than 30 values
+        else {
+            var count = dataStringArray.count - 30
+            //loop through each value to append to the string separating each value by commas excluding the last value
+            for _ in dataStringArray {
+                
+                if(count < dataStringArray.count - 1){
+                    dataParam = dataParam + "\(dataStringArray[count]),"
+                }
+                else {
+                    dataParam = dataParam + "\(dataStringArray[count])"
+                    break
+                }
+                count += 1
+            }
+        }
+        //return the data parameter to be put in the request url
+        return dataParam
+    }
 }
 
 struct Overview_Previews: PreviewProvider {
