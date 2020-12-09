@@ -81,8 +81,8 @@ struct SearchGym: View {
      */
     func searchApi() {
         let currentLoc = currentLocation()
-        let currentLatitude = 37.2296
-        let currentLongitude = -80.4139
+        let currentLatitude = currentLoc.latitude
+        let currentLongitude = currentLoc.longitude
         
         obtainGymDataFromApi(radiusMiles: radii[selectedRadiusIndex], currentLatitude: currentLatitude, currentLongitude: currentLongitude)
     }
