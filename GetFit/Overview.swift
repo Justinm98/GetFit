@@ -2,7 +2,7 @@
 //  Overview.swift
 //  GetFit
 //
-//  Created by CS3714 on 11/22/20.
+//  Created by Nathan Lam on 11/22/20.
 //
 
 import SwiftUI

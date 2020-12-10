@@ -2,7 +2,7 @@
 //  GymStruct.swift
 //  GetFit
 //
-//  Created by CS3714 on 11/21/20.
+//  Created by Nathan Lam on 11/21/20.
 //
 
 import SwiftUI
